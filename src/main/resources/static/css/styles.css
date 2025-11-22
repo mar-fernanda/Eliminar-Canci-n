@@ -143,6 +143,7 @@ form input:focus,
 .actions form {
   width: auto;
   margin: 0;
+}
 
 .actions form button {
   margin: 0;

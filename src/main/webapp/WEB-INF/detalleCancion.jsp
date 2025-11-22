@@ -15,12 +15,20 @@
     <p><b>Fecha Creación:</b> <c:out value="${cancion.fechaCreacion}" /></p>
     <p><b>Fecha Actualización:</b> <c:out value="${cancion.fechaActualizacion}" /></p>
 
-<a href="/canciones/formulario/editar/${cancion.id}" class="btn">Editar Canción</a>
-<br>
-<a href="/canciones/eliminar/${cancion.id}"
-    class="btn"
-    onclick="return confirm('¿Seguro que deseas eliminar esta canción?');">
-    Eliminar Canción</a>
-    <a href="/canciones">Volver a lista de canciones</a>
+<div class="actions">
+    <a href="/canciones/formulario/editar/${cancion.id}" class="btn">Editar Canción</a>
+
+    <form action="/canciones/eliminar/${cancion.id}" method="post">
+        <input type="hidden" name="_method" value="delete"/>
+        <button type="submit" class="btn"
+                onclick="return confirm('¿Seguro que deseas eliminar esta canción?');">
+            Eliminar Canción
+        </button>
+    </form>
+</div>
+
+<a href="/canciones" class="btn">⬅ Volver al Inicio</a>
+
+
 </body>
 </html>

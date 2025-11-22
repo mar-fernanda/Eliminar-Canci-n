@@ -18,4 +18,5 @@ public class CancionesApplication {
         filterRegistrationBean.addUrlPatterns("/*");
         return filterRegistrationBean;
     }
+    
 }
